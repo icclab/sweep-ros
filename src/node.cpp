@@ -123,6 +123,9 @@ int main(int argc, char *argv[]) try
 
     //Stop Scanning & Destroy Driver
     device.stop_scanning();
+
+    //Stop motor
+    device.set_motor_speed(0);
 }
 
     catch (const sweep::device_error& e) {
